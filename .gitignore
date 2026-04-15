@@ -1,0 +1,28 @@
+# Build artifacts
+/target/
+Cargo.lock
+
+# OS files
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+/logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pickle
+
+# Evaluation outputs
+result.csv
+/outputs/
+analysis_logs/
+analysis_all_logs/
+
+# Environment
+.env

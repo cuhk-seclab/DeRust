@@ -1,0 +1,61 @@
+[package]
+name = "derust"
+version = "0.1.0"
+default-run = "derust"
+edition = "2021"
+exclude = ["samples"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+test = true
+doctest = false
+name = "derust"
+
+[[bin]]
+name = "derust"
+test = false
+doctest = false
+
+[[bin]]
+name = "cargo-derust"
+test = false
+doctest = false
+
+[dependencies]
+cargo_metadata = "0.11"  # 0.14.1
+chrono = "0.4"  # 0.4.19
+dashmap = "3.11"
+fern = "0.6.0"
+if_chain = "1.0"
+log = "0.4"  # 0.4.14
+maplit = "1.0.2"
+once_cell = "1.5.2"
+parking_lot = "0.11"
+rustc_version = "0.2.3"
+serde = { version = "1.0", features = ["derive"] }  # 1.0.130
+serde_json = "1.0.56"  # 1.0.72
+snafu = "0.6"  # 0.7.0
+termcolor = "1.1.2"
+toml = "0.5.6"
+wait-timeout = "0.2"
+bitflags = "1.2.1"
+which = "4.0"
+
+smallvec = "1.7.0"
+z3 = "0.11.2"
+walkdir = "2.3.2"
+rustc-demangle = "0.1.21"
+colorful = "0.2.1"
+stopwatch = "0.0.7"
+
+[features]
+backtraces = ["snafu/backtraces", "snafu/backtraces-impl-backtrace-crate"]
+
+[package.metadata.rust-analyzer]
+rustc_private = true
+
+[lints.clippy]
+as_conversions = "warn"
+cast_ptr_alignment = "warn"
+unsound_collection_transmute = "warn"
